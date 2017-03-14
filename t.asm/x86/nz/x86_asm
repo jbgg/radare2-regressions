@@ -42,6 +42,9 @@ PLUGIN=x86.nz
 # exactly the same. These instructions are accepted as correct, but marked with
 # comments starting with "wbs" (Wrong, But Same).
 
+BITS=16
+test_vector "${PLUGIN}" "jmp 0" ebfe
+
 BITS=32
 test_vector "${PLUGIN}" "aaa" 37
 test_vector "${PLUGIN}" "aad" d50a  # This instruction doesn't seem to need arguments
